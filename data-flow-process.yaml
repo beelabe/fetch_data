@@ -1,0 +1,46 @@
+###
+### A complete description of a Prefect Deployment for flow 'data-flow'
+###
+name: alara-deployment
+description: null
+version: b86cb4258f14b95ba3c6e5ec22dba448
+# The work queue that will handle this deployment's runs
+work_queue_name: test-work-queue
+work_pool_name: test-work-pool
+tags: []
+parameters: {}
+schedule: null
+is_schedule_active: null
+infra_overrides: {}
+infrastructure:
+  type: process
+  env: {}
+  labels: {}
+  name: null
+  command: null
+  stream_output: true
+  working_dir: null
+  block_type_slug: process
+  _block_type_slug: process
+
+###
+### DO NOT EDIT BELOW THIS LINE
+###
+flow_name: data-flow
+manifest_path: null
+storage: null
+path: /home/local/code/alara/prefect-recipes/
+entrypoint: alara.py:data_flow
+parameter_openapi_schema:
+  title: Parameters
+  type: object
+  properties:
+    url:
+      title: url
+      position: 0
+      type: string
+  required:
+  - url
+  definitions: null
+timestamp: '2023-07-07T01:53:07.468158+00:00'
+triggers: []
