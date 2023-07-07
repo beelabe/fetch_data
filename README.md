@@ -13,6 +13,7 @@ This script defines a flow using Prefect to fetch data from an external API, pro
 ## Usage
 
 1. Install the required dependencies by running `pip install prefect requests pandas`.
+2. Docker engine installed and running.
 
 The script defines a flow named `data_flow` that takes a `url` parameter to fetch data from an external API. The flow consists of three tasks:
 
@@ -42,6 +43,9 @@ The above command does the following:
 6) Finally, the `--apply` flag applies the deployment immediately after building it.
 
 NOTE: The yaml file contains the entry point to the flow in `/opt/prefect/flows`. Docker deployments using Prefect require the alara.py script to specify a location, which can also be remote or in the cloud such as S3. **Prefect  will not find the script unless this is specified.** The above command in this case will also include an `-sb` flag, such as `-sb s3/bucket/sub-bucket-here` to create the deployment. 
+
+Here's an example of starting a worker according to the given example:
+```prefect worker start -p 'test-work-pool'```
 
 Run the flow with the following command:
 
