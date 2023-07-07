@@ -6,7 +6,7 @@ This script defines a flow using Prefect to fetch data from an external API, pro
 ## Requirements
 
 - Python 3
-- Prefect
+- Prefect 2
 - Requests
 - Pandas
 
