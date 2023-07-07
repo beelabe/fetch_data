@@ -1,0 +1,58 @@
+###
+### A complete description of a Prefect Deployment for flow 'data-flow'
+###
+name: alara-docker-deploy
+description: null
+version: de1d022849a38d1aed2b56a98362761e
+# The work queue that will handle this deployment's runs
+work_queue_name: test-work-queue
+work_pool_name: test-work-pool
+tags: []
+parameters: {}
+schedule: null
+is_schedule_active: null
+infra_overrides: {}
+
+###
+### DO NOT EDIT BELOW THIS LINE
+###
+flow_name: data-flow
+manifest_path: null
+infrastructure:
+  type: docker-container
+  env: {}
+  labels: {}
+  name: null
+  command: null
+  image: prefecthq/prefect:2.10.19-python3.11
+  image_pull_policy: null
+  image_registry: null
+  networks: []
+  network_mode: null
+  auto_remove: false
+  volumes: []
+  stream_output: true
+  memswap_limit: null
+  mem_limit: null
+  privileged: false
+  _block_document_id: 71121799-ee2c-42e4-9f40-95161d68105a
+  _block_document_name: test-docker-block
+  _is_anonymous: false
+  block_type_slug: docker-container
+  _block_type_slug: docker-container
+storage: null
+path: /opt/prefect/flows
+entrypoint: alara.py:data_flow
+parameter_openapi_schema:
+  title: Parameters
+  type: object
+  properties:
+    url:
+      title: url
+      position: 0
+      type: string
+  required:
+  - url
+  definitions: null
+timestamp: '2023-07-07T16:50:33.041752+00:00'
+triggers: []
