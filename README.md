@@ -13,7 +13,6 @@ This script defines a flow using Prefect to fetch data from an external API, pro
 ## Usage
 
 1. Install the required dependencies by running `pip install prefect requests pandas`.
-2. Run the script with `python <script_name>.py`.
 
 The script defines a flow named `data_flow` that takes a `url` parameter to fetch data from an external API. The flow consists of three tasks:
 
