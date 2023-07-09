@@ -3,7 +3,6 @@
 import requests
 import pandas as pd
 from prefect import flow, task, Flow, artifacts
-#from prefect.run_configs import DockerRun
 
 # Define a decorator function that takes a task function and returns a wrapped function
 def error_checking(func):
@@ -63,9 +62,6 @@ def data_flow(url: str):
     processed_data = process_data(data)
     # Call the publish_data task with the processed_data output
     publish_data(processed_data)
-
-# Set the run config for the flow to use Docker container
-#data_flow.run_config = DockerRun(image="prefecthq/prefect")
 
 # Run the flow with a sample url parameter
 if __name__ == "__main__":
