@@ -25,8 +25,6 @@ The script also defines an `error_checking` decorator function that wraps each t
 
 The flow can be run by calling its `run` method with a sample URL parameter, as shown at the end of the script.
 
-Note that the script includes commented-out code to set the run config for the flow to use a Docker container. This can be uncommented if desired.
-
 ## Deployment
 
 To set up the deployment and flow in Prefect, follow these steps:
