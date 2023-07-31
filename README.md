@@ -40,8 +40,6 @@ The above command does the following:
 5) The `-o` flag specifies the output file for the generated YAML file as `docker-deployment.yaml`. 
 6) Finally, the `--apply` flag applies the deployment immediately after building it.
 
-NOTE: The yaml file contains the entry point to the flow in `/opt/prefect/flows`. Docker deployments using Prefect require the alara.py script to specify a location, which can also be remote or in the cloud such as S3. **Prefect  will not find the script unless this is specified.** The above command in this case will also include an `-sb` flag, such as `-sb s3/bucket/sub-bucket-here` to create the deployment. 
-
 Here's an example of starting a worker according to the given example:
 ```prefect worker start -p 'test-work-pool'```
 
